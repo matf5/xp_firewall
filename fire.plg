@@ -1,0 +1,44 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: fire - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP8F.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Debug/" /Fp"Debug/fire.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Documents and Settings\Administrator\×ÀÃæ\Ô´´úÂë(ÍÚ¿Õ°æ)\AddRuleDlg.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP8F.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP90.tmp" with contents
+[
+version.lib Wsock32.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/fire.pdb" /debug /machine:I386 /out:"Debug/fire.exe" /pdbtype:sept 
+".\Debug\AddRuleDlg.obj"
+".\Debug\fire.obj"
+".\Debug\fireDoc.obj"
+".\Debug\fireView.obj"
+".\Debug\MainFrm.obj"
+".\Debug\sockUtil.obj"
+".\Debug\StdAfx.obj"
+".\Debug\SystemTray.obj"
+".\Debug\TDriver.obj"
+".\Debug\fire.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP90.tmp"
+<h3>Output Window</h3>
+Compiling...
+AddRuleDlg.cpp
+Linking...
+Creating command line "bscmake.exe /nologo /o"Debug/fire.bsc"  ".\Debug\StdAfx.sbr" ".\Debug\AddRuleDlg.sbr" ".\Debug\fire.sbr" ".\Debug\fireDoc.sbr" ".\Debug\fireView.sbr" ".\Debug\MainFrm.sbr" ".\Debug\sockUtil.sbr" ".\Debug\SystemTray.sbr" ".\Debug\TDriver.sbr""
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+fire.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

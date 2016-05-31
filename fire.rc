@@ -1,0 +1,425 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+// Generated Help ID header file
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "resource.hm"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\fire.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_MAINFRAME           ICON    DISCARDABLE     "res\\fire.ico"
+IDR_FIRETYPE            ICON    DISCARDABLE     "res\\fireDoc.ico"
+IDI_LED_GREEN           ICON    DISCARDABLE     "res\\led_gree.ico"
+IDI_LED_RED             ICON    DISCARDABLE     "res\\led_red.ico"
+IDI_LED_OFF             ICON    DISCARDABLE     "res\\led_off.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP  DISCARDABLE     "res\\toolbar1.bmp"
+IDB_BITMAP_LOGO         BITMAP  DISCARDABLE     "res\\bitmap1.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR DISCARDABLE  65, 53
+BEGIN
+    BUTTON      ID_Start
+    BUTTON      ID_STOP
+    BUTTON      ID_BLOCKALL
+    BUTTON      ID_ALLOWALL
+    SEPARATOR
+    BUTTON      ID_BLOCKPING
+    BUTTON      ID_APP_ABOUT
+    SEPARATOR
+    BUTTON      ID_ICON
+    SEPARATOR
+    BUTTON      32796
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU DISCARDABLE 
+BEGIN
+    POPUP "PopUp"
+    BEGIN
+        MENUITEM "&About",                      ID_APP_ABOUT
+        MENUITEM "Minimize",                    ID_POPUP_MINIMIZE
+        MENUITEM "Maximize",                    ID_POPUP_MAXIMIZE
+        MENUITEM SEPARATOR
+        MENUITEM "&Shutdown Firewall",          ID_POPUP_EXIT
+    END
+END
+
+IDR_MAINFRAME MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "E&xit",                       ID_EXIT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS PRELOAD MOVEABLE PURE 
+BEGIN
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    VK_F1,          ID_HELP,                VIRTKEY, NOINVERT
+    VK_F1,          ID_HELP_FINDER,         VIRTKEY, CONTROL, NOINVERT
+    VK_F1,          ID_CONTEXT_HELP,        VIRTKEY, SHIFT, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_FIRE_FORM DIALOGEX 0, 0, 345, 158
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Add Rules",IDC_ADDRULE,31,137,75,21
+    PUSHBUTTON      "View Rules",IDC_VIEWRULES,236,137,75,21
+    CONTROL         "List1",IDC_LIST_RESULT,"SysListView32",LVS_REPORT | 
+                    LVS_AUTOARRANGE | WS_BORDER | WS_TABSTOP,14,34,331,88,0,
+                    HIDC_LIST_RESULT
+    PUSHBUTTON      "Bloack All",IDC_BLOCKALL,21,7,50,21,NOT WS_VISIBLE
+    PUSHBUTTON      "Block Ping",IDC_BLOCKPING,108,7,50,21,NOT WS_VISIBLE
+    PUSHBUTTON      "&Start",IDC_START,149,137,50,21,NOT WS_VISIBLE
+    PUSHBUTTON      "Allow All",IDC_ALLOWALL,187,7,50,21,NOT WS_VISIBLE
+    GROUPBOX        "",IDC_STATIC,7,15,338,111
+    LTEXT           "Below are the rules that are registered in the rule file ",
+                    IDC_STATIC,90,24,165,8
+END
+
+IDD_ADDRULE DIALOG DISCARDABLE  0, 0, 308, 186
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Add Rules"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_SADD,75,50,73,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_DADD,222,50,73,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_SPORT,75,92,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_DPORT,222,92,40,14,ES_AUTOHSCROLL
+    COMBOBOX        IDC_COMBO1,75,130,58,43,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO2,222,130,58,43,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Save",IDC_ADDSAVE,83,156,50,17
+    PUSHBUTTON      "&Cancel",IDCANCEL,221,158,50,17
+    LTEXT           "ADD YOUR NEW RULES TO THIS DIALOG BOX",IDC_STATIC,73,7,
+                    160,8
+    GROUPBOX        "Apply this rule to",IDC_STATIC,4,19,299,131
+    GROUPBOX        "(IP Address Example, 192.168.0.122)",IDC_STATIC,11,33,
+                    289,40
+    LTEXT           "Source Address :",IDC_STATIC,15,50,55,8
+    LTEXT           "Destination Address:",IDC_STATIC,153,53,66,8
+    LTEXT           "Destination Port :",IDC_STATIC,153,95,55,8
+    LTEXT           "Source Port :",IDC_STATIC,15,95,42,8
+    GROUPBOX        "Enter Port No. (For exp : 80 , 1450)",IDC_STATIC,12,78,
+                    288,34
+    LTEXT           "Action :",IDC_STATIC,15,131,25,8
+    LTEXT           "Protocol :",IDC_STATIC,153,131,31,8
+    LTEXT           "(Select to Allow or Block)",IDC_STATIC,53,118,80,8
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "Final Year Project of LIMAT Students.\0"
+            VALUE "CompanyName", "Sudhir Corp.\0"
+            VALUE "FileDescription", "Firewall\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "Firewall\0"
+            VALUE "LegalCopyright", "Copyright (C) 2003\0"
+            VALUE "LegalTrademarks", "Copyrighted to Sudhir\0"
+            VALUE "OriginalFilename", "fire.EXE\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "NetDefender\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_FIRE_FORM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        TOPMARGIN, 7
+    END
+
+    IDD_ADDRULE, DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+        RIGHTMARGIN, 303
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 179
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_ADDRULE DLGINIT
+BEGIN
+    IDC_COMBO1, 0x403, 6, 0
+0x4c41, 0x4f4c, 0x0057, 
+    IDC_COMBO1, 0x403, 5, 0
+0x4544, 0x594e, "\000" 
+    IDC_COMBO2, 0x403, 4, 0
+0x4354, 0x0050, 
+    IDC_COMBO2, 0x403, 3, 0
+0x5049, "\000" 
+    IDC_COMBO2, 0x403, 5, 0
+0x4349, 0x504d, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDR_MAINFRAME           "fire\n\nFire\n\n\nFire.Document\nFire Document"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "Firewall"
+    AFX_IDS_IDLEMESSAGE     "For Help, press F1"
+    AFX_IDS_HELPMODEMESSAGE "Select an object on which to get Help"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+    ID_INDICATOR_ONLINELED  " "
+    ID_INDICATOR_OFFLINELED " "
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Minimize to System Tray\nExit"
+    ID_HELP_INDEX           "Opens Help\nHelp Topics"
+    ID_HELP_FINDER          "List Help topics\nHelp Topics"
+    ID_CONTEXT_HELP         "Display help for clicked on buttons, menus and windows\nHelp"
+    ID_HELP                 "Display help for current task or command\nHelp"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EXIT                 "Exit the Firewall \n Exit"
+    ID_HELP_CONTENTS        "Show the Documentation of the program\n Contents"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_BLOCKALL            "Block all the Traffic \n Block All Traffic"
+    IDC_BLOCKPING           "Block the Ping \n Block Ping"
+    IDC_ALLOWALL            "Allow all the Traffic to pass threw Firewall \n Allow All Traffic"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    CG_IDS_SOCKETS_INIT_FAILED "Windows sockets initialization failed."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_Start                "Start the Firewall \n Start Firewall"
+    ID_STOP                 "Stop the Firewall \n Stop Firewall"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\fire.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
