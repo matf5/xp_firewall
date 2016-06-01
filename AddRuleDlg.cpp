@@ -80,15 +80,16 @@ BOOL CAddRuleDlg::Verify(CString str)
 	for(int i = 0;i<3;i++){
 		
     index = str.Find(_T('.'));
-	//MessageBox((CString)index);
+	//get the position of the first '.'
 	if(index==-1)
 	return FALSE;
 	else
 	{
 
 	CString temp =str.Left(str.Find(_T('.')));
-	//MessageBox(temp);
+	//get the left side of the '.'
 	int flag=1;
+	//judge it is all number
 	for(int j =0;j<temp.GetLength();j++){
 		if(str[j]>='0'&&str[j]<='9'){
 		}
@@ -96,7 +97,7 @@ BOOL CAddRuleDlg::Verify(CString str)
 			return FALSE;
 	}
 	str.Delete(0,index+1);
-	//MessageBox(str);
+	//delete the string left
 	}
 	}
 	for(int j =0;j<str.GetLength();j++){
@@ -144,21 +145,22 @@ void CAddRuleDlg::OnAddsave()
 	int addType;
 	int action = m_action.GetCurSel();
 	char ch[30];
+    //action:allow or deny
+	//type: tcp ip icmp
 	if(action == 0 )
-		addAct = FALSE;
+	addAct = FALSE;
 	else
-		addAct = TRUE;
+	addAct = TRUE;
 	int type = m_protocol.GetCurSel();
 	if(type == 0)
-		 addType=1;
-		if(type ==1)
-			addType=17;
-		if(type==2)
-			addType=6;
-
+	addType=1;
+    if(type ==1)
+	addType=17;
+	if(type==2)
+	addType=6;
 	wsprintf(ch,"Action: %d, Protocol %d",action,type);
 	MessageBox(ch);
-	IPFilter   ip;
+	IPFilter ip;
 	ip.destinationIp = inet_addr((LPCTSTR)m_sdadd);
 	ip.sourceIp=inet_addr((LPCTSTR)m_ssadd);
 	ip.destinationMask = inet_addr("255.255.255.255");
@@ -180,9 +182,9 @@ void CAddRuleDlg::OnAddsave()
 			 addType,
 			 addAct);
     if( NewFile()== FALSE)
-		MessageBox("unable to create file");				//create a new file
+	MessageBox("unable to create file");				//create a new file
 	
-	 GotoEnd();
+	GotoEnd();
 	 
 	
 	//MessageBox(_str);

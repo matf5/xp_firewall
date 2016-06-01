@@ -163,9 +163,9 @@ void CFireView::OnStart()
 //禁用所有的ICMP包
 void CFireView::OnBlockping() 
 {
-	MessageBox("此功能需要你来实现！");
+	//MessageBox("此功能需要你来实现！");
 	// Your code
-	IPFilter filter;
+	IPFilter filter;  //定义一个过滤器
 	filter.protocol = 1;
 	filter.destinationIp =0;
 	filter.destinationMask=0;
@@ -174,20 +174,20 @@ void CFireView::OnBlockping()
 	filter.sourceMask=0;
 	filter.sourcePort=0;
 	filter.drop=TRUE;
-     m_Addrule.AddFilter(filter);
-		m_cping.EnableWindow(FALSE);
-		ping = FALSE;
-		allow = TRUE;
-		block = TRUE;
+    m_Addrule.AddFilter(filter); //添加该过滤器
+	m_cping.EnableWindow(FALSE);
+	ping = FALSE;
+	allow = TRUE;
+	block = TRUE;
 	
 }
 
 //禁用所有包
 void CFireView::OnBlockall() 
 {
-	MessageBox("此功能需要你来实现！");
+	//MessageBox("此功能需要你来实现！");
 	// Your code
-	IPFilter filter;
+	IPFilter filter;  //定义一个过滤器
 	filter.protocol=0;
 	filter.destinationIp=0;
 	filter.destinationMask = 0;
@@ -196,8 +196,8 @@ void CFireView::OnBlockall()
 	filter.sourceMask = 0;
 	filter.sourcePort=0;
 	filter.drop=TRUE;
-	m_Addrule.AddFilter(filter);
-	block=FALSE;
+	m_Addrule.AddFilter(filter); //添加该过滤器
+	block=FALSE;   //设置block,ping,allow的值
 	ping=FALSE;
 	allow=TRUE;
 	m_cblockall.EnableWindow(FALSE);
@@ -206,9 +206,9 @@ void CFireView::OnBlockall()
 //启用所有包
 void CFireView::OnAllowall() 
 {
-	MessageBox("此功能需要你来实现！");
+	
 	if(m_ipFltDrv.WriteIo(CLEAR_FILTER,NULL,0)!=DRV_ERROR_IO){
-		m_cResult.DeleteAllItems();
+		m_cResult.DeleteAllItems();  //删除所有的条目
 		m_cping.EnableWindow();
 		m_cblockall.EnableWindow();
 		m_cvrules.EnableWindow();
@@ -322,19 +322,19 @@ void CFireView:: ParseToIp(CString str)
 	ip1.sourceIp		= inet_addr((LPCTSTR)_str[3]);
 	ip1.sourceMask		= inet_addr((LPCTSTR)_str[4]);
 	ip1.sourcePort		= htons(atoi((LPCTSTR)_str[5]));
-	ip1.protocol			= atoi((LPCTSTR)_str[6]);
+	ip1.protocol		= atoi((LPCTSTR)_str[6]);
 
 
 	int		drop;
 	drop				= atoi((LPCTSTR)_str[7]);
 	if(drop == 0)
 	{
-		ip1.drop		=	FALSE;
+		ip1.drop=FALSE;
 	
 	}
 	if(drop	== 1)
 	{
-		ip1.drop		= TRUE;
+		ip1.drop=TRUE;
 	
 	}
 	
